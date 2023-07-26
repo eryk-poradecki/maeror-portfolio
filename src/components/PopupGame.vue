@@ -1,12 +1,14 @@
 <template>
   <div class="popout-modal" @click="closeAndNotifyParent">
     <div class="popout-content bg-neutral-800" @click.stop>
-          <iframe
-            class="rounded-md w-[40%] h-[25vh] float-right mt-5 mx-3"
-            :src="getYouTubeEmbedLink(selectedProject.youtubeLink)"
-            allowfullscreen
-          ></iframe>
-      <h1 class="text-5xl font-bold my-4">{{ selectedProject.name }}</h1>
+      <iframe
+        class="rounded-md md:w-[40%] md:h-[25vh] md:float-right md:mt-5 md:mx-3 w-full h-full"
+        :src="getYouTubeEmbedLink(selectedProject.youtubeLink)"
+        allowfullscreen
+      ></iframe>
+      <h1 class="text-5xl font-bold mt-5 mb-10 hover:text-gray-700">
+        {{ selectedProject.name }}
+      </h1>
 
       <div>
         <p class="text-lg">{{ selectedProject.longDescription }}</p>
