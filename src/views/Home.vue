@@ -56,7 +56,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, computed } from "vue";
+import { ref, onMounted } from "vue";
 import projectsJson from "../assets/projects.json";
 import PopupModal from "../components/PopupModal.vue";
 
