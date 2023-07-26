@@ -21,7 +21,7 @@
 </template> -->
 
 <template>
-  <div v-for="category in filteredCategories" :key="category" class="pt-10">
+  <div v-for="category in categories" :key="category" class="pt-10">
     <h1 v-if="hasProjectsInCategory(category)" class="text-3xl font-bold text-center text-neutral-200">
       {{ categoryNames[categories.indexOf(category)] }}
     </h1>
@@ -29,7 +29,7 @@
       <div
         v-for="project in projects"
         :key="project.id"
-        class="bg-neutral-400 shadow-lg rounded-xl max-w-md mx-auto"
+        class="bg-neutral-400 shadow-lg rounded-xl max-w-md mx-auto min-h-full"
       >
         <div v-if="project.category === category">
           <img
@@ -51,9 +51,7 @@
   </div>
 
   <teleport to="body">
-    <transition name="fade">
       <PopupModal v-if="isModalOpen" :closeModal="closeModal" :selectedProject="selectedProject" />
-    </transition>
   </teleport>
 </template>
 
@@ -87,9 +85,6 @@ const hasProjectsInCategory = (category) => {
   return projects.value.some((project) => project.category === category);
 };
 
-const filteredCategories = computed(() => {
-  return categories.filter((category) => hasProjectsInCategory(category));
-});
 </script>
 <style>
 
