@@ -25,7 +25,7 @@
     <h1 v-if="hasProjectsInCategory(category)" class="text-3xl font-bold text-center text-neutral-200">
       {{ categoryNames[categories.indexOf(category)] }}
     </h1>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 p-8 max-w-[85%] mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-10 p-8 max-w-[85%] mx-auto">
       <div
         v-for="project in projects"
         :key="project.id"
