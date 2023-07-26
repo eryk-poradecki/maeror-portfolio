@@ -56,7 +56,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, watch } from "vue";
 import projectsJson from "../assets/projects.json";
 import PopupModal from "../components/PopupModal.vue";
 
@@ -85,7 +85,17 @@ const hasProjectsInCategory = (category) => {
   return projects.value.some((project) => project.category === category);
 };
 
+watch(isModalOpen, (newValue) => {
+  if (newValue) {
+    document.body.classList.add("modal-open");
+  } else {
+    document.body.classList.remove("modal-open");
+  }
+});
+
 </script>
 <style>
-
+.modal-open {
+  overflow: hidden;
+}
 </style>
