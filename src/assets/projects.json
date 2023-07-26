@@ -4,6 +4,7 @@
     "name": "Silence",
     "category": "game",
     "shortDescription": "Together with a friend, take on the role of an agent and a hacker who must stop a military company from launching a dangerous combat robot.",
+    "longDescription": "Consequat fugiat eu dolor do ullamco et ea. Non esse deserunt ex officia ut aliquip. Est aute ut magna ut qui anim veniam minim et id officia sit tempor. Nisi cupidatat non est sit do esse sint in non occaecat duis ipsum. Quis officia duis velit eu dolore ipsum nulla in proident qui. Mollit eiusmod eu deserunt id officia dolor ut irure do sunt. Elit ut ullamco fugiat culpa aliqua id veniam esse consequat labore est eu dolore dolore. Officia consequat laboris dolore aliqua laboris elit ex aute commodo. Aliqua pariatur minim incididunt cillum sint et quis sunt. Ad labore eiusmod incididunt amet ex adipisicing velit nulla. Sit nostrud ea voluptate nulla culpa ipsum veniam tempor dolor ullamco reprehenderit. Labore esse ea qui dolore quis voluptate qui officia est. Aliqua in voluptate ad esse nulla ea ut adipisicing nulla ad tempor exercitation. Ut incididunt excepteur irure enim. Quis id in ea dolor ullamco eu qui consectetur occaecat.",
     "technologies": ["Vue.js", "HTML", "CSS"],
     "image": "../src/assets/projects/silence/images/silence.png",
     "liveDemoLink": "https://example.com/project1",
@@ -23,13 +24,23 @@
   },
   {
     "id": "2",
-    "name": "Huj",
+    "name": "Lorem Ipsum",
     "category": "game",
     "shortDescription": "Dolor cillum aute sunt tempor. Culpa labore magna aute mollit. Labore cillum est labore id ullamco est culpa sit ad dolor nulla magna laboris. Sit dolore in in culpa. Officia reprehenderit non in ut consequat ea aliqua. Mollit ut pariatur proident eu nulla sint officia commodo.",
-    "technologies": ["Vue.js", "HTML", "CSS"],
     "image": "../src/assets/projects/huj/images/Untitled-1.png",
     "liveDemoLink": "https://example.com/project1",
     "youtubeLink": "https://www.youtube.com/watch?v=smbrYnifdPU&ab_channel=cladur",
     "githubLink": "https://github.com/cladur/silence"
+  },
+  {
+    "id": "3",
+    "name": "Hide Away",
+    "category": "music",
+    "shortDescription": "Something new, this one was a bit of an experiment for me. Especially 'Do You Know' it's something completely different than my usual stuff. Hope you'll enjoy!",
+    "image": "../src/assets/maeror-avatar.png",
+    "spotifyLink": "https://open.spotify.com/track/17gFHzECRd4d6ghugQQRFL?si=c005f1942dd24fc4",
+    "soundcloudLink": "https://soundcloud.com/maerormusic/hide-away",
+    "soundcloudId": "1547715244",
+    "spotifyId": "17gFHzECRd4d6ghugQQRFL?utm_source=generator"
   }
 ]
