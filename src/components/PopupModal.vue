@@ -1,6 +1,6 @@
 <template>
-  <div class="popout-modal" @click="closeAndNotifyParent">
-    <div class="popout-content bg-neutral-800" @click.stop>
+  <div @click="closeAndNotifyParent">
+    <div class="bg-neutral-800" @click.stop>
       <component
         v-if="selectedProject"
         :is="popoutComponent"
