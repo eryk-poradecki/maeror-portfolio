@@ -19,9 +19,21 @@
         style="cursor: pointer"
       >
         <div v-if="project.category === category">
-          <div>
+          <div class="group">
             <div
-              class="absolute inset-0 rounded-t-xl hover:opacity-30"
+              class="px-3 py-3 relative z-10 opacity-0 group-hover:opacity-100"
+            >
+              <div class="flex justify-center items-center mb-2 absolute">
+                <h1 class="font-bold text-5xl text-white mt-5">
+                  {{ project.name }}
+                </h1>
+              </div>
+              <div class="flex pt-20">
+                <p class="text-lg text-white">{{ project.shortDescription }}</p>
+              </div>
+            </div>
+            <div
+              class="absolute inset-0 rounded-t-xl group-hover:opacity-30"
               :style="{
                 backgroundImage: `url(${project.image})`,
                 backgroundSize: 'cover',
@@ -34,14 +46,6 @@
               class="opacity-0 h-36 object-cover"
               style="visibility: hidden"
             />
-            <div class="px-3 py-3 relative z-10">
-              <div class="flex justify-center items-center mb-2">
-                <h1 class="font-bold text-5xl text-white">
-                  {{ project.name }}
-                </h1>
-              </div>
-              <p class="text-lg text-white">{{ project.shortDescription }}</p>
-            </div>
           </div>
         </div>
       </div>
