@@ -2,33 +2,46 @@
 
 <template>
   <div v-for="category in categories" :key="category" class="pt-10">
-    <h1 v-if="hasProjectsInCategory(category)" class="text-3xl font-bold text-center text-neutral-200">
+    <h1
+      v-if="hasProjectsInCategory(category)"
+      class="text-3xl font-bold text-center text-neutral-200"
+    >
       {{ categoryNames[categories.indexOf(category)] }}
     </h1>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-10 p-8 max-w-[85%] mx-auto">
+    <div
+      class="grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-10 p-8 max-w-[85%] mx-auto"
+    >
       <div
         v-for="project in projects"
         :key="project.id"
         class="relative overflow-hidden max-w-md mx-auto rounded-xl"
         @click="openModal(project)"
-        style="cursor: pointer;" 
+        style="cursor: pointer"
       >
         <div v-if="project.category === category">
-          <div
-            class="absolute inset-0 rounded-t-xl"
-            :style="{ backgroundImage: `url(${project.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
-          ></div>
-          <img
-            :src="project.image"
-            :alt="project.name"
-            class="opacity-0 h-36 object-cover"
-            style="visibility: hidden;"
-          />
-          <div class="px-3 py-3 relative z-10">
-            <div class="flex justify-center items-center mb-2">
-              <h1 class="font-bold text-5xl text-white">{{ project.name }}</h1>
+          <div>
+            <div
+              class="absolute inset-0 rounded-t-xl hover:opacity-30"
+              :style="{
+                backgroundImage: `url(${project.image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }"
+            ></div>
+            <img
+              :src="project.image"
+              :alt="project.name"
+              class="opacity-0 h-36 object-cover"
+              style="visibility: hidden"
+            />
+            <div class="px-3 py-3 relative z-10">
+              <div class="flex justify-center items-center mb-2">
+                <h1 class="font-bold text-5xl text-white">
+                  {{ project.name }}
+                </h1>
+              </div>
+              <p class="text-lg text-white">{{ project.shortDescription }}</p>
             </div>
-            <p class="text-lg text-white">{{ project.shortDescription }}</p>
           </div>
         </div>
       </div>
@@ -36,7 +49,11 @@
   </div>
 
   <teleport to="body">
-      <PopupModal v-if="isModalOpen" :closeModal="closeModal" :selectedProject="selectedProject" />
+    <PopupModal
+      v-if="isModalOpen"
+      :closeModal="closeModal"
+      :selectedProject="selectedProject"
+    />
   </teleport>
 </template>
 
@@ -114,7 +131,6 @@ watch(isModalOpen, (newValue) => {
     document.body.classList.remove("modal-open");
   }
 });
-
 </script>
 <style>
 .modal-open {
