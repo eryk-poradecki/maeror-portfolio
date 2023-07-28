@@ -82,7 +82,7 @@ const getYouTubeEmbedLink = (youtubeLink) => {
 }
 
 .popout-content {
-  width: 60%;
+  width: 50%;
   max-height: 90%;
   overflow-y: auto;
   padding: 20px;
