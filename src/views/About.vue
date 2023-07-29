@@ -72,10 +72,58 @@
             />
           </a>
         </div>
+        <div>
+          <div class="flex items-center justify-center mt-5">
+            <button
+              @click="openResume"
+              class="custom-resume-button-bg text-white font-bold py-2 px-4 rounded"
+            >
+              Open Resume
+            </button>
+            <div
+              v-if="showResume"
+              class="fixed top-0 left-0 w-screen h-screen bg-black opacity-100 flex items-center justify-center"
+            >
+              <button
+                @click="closeResume"
+                class="absolute top-14 right-14 py-2 px-4 rounded text-white text-5xl custom-resume-button-bg"
+              >
+                &times;
+              </button>
+              <iframe :src="resumeUrl" class="w-full h-full"></iframe>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      resumeUrl: "src/assets/Eryk Poradecki.pdf",
+      showResume: false,
+    };
+  },
+  methods: {
+    openResume() {
+      this.showResume = true;
+    },
+    closeResume() {
+      this.showResume = false;
+    },
+  },
+};
+</script>
+
 <style>
+iframe {
+  border: none;
+}
+
+.custom-resume-button-bg{
+  background-color: #323639;
+}
 </style>
