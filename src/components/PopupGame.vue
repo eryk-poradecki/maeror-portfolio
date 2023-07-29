@@ -11,7 +11,7 @@
       </h1>
 
       <div>
-        <p class="text-lg">{{ selectedProject.longDescription }}</p>
+        <div v-html="renderedDescription" class="text-lg"></div>
 
         <div v-if="selectedProject.technologies">
           <h2 class="text-xl font-bold mt-4">Technologies:</h2>
@@ -54,6 +54,9 @@
 </template>
 
 <script setup>
+import { onMounted, ref } from "vue";
+import { marked } from 'marked';
+
 const props = defineProps(["closeModal", "selectedProject"]);
 
 const closeAndNotifyParent = () => {
@@ -64,6 +67,23 @@ const getYouTubeEmbedLink = (youtubeLink) => {
   const videoId = youtubeLink.split("v=")[1].split("&")[0];
   return `https://www.youtube.com/embed/${videoId}`;
 };
+
+const markdownToHTML = (content) => {
+  return marked(content);
+};
+
+const renderedDescription = ref(0);
+
+onMounted(async () => {
+  try {
+    const response = await fetch(props.selectedProject.longDescription);
+    const markdownContent = await response.text();
+    renderedDescription.value = markdownToHTML(markdownContent);
+  } catch (error) {
+    console.error("Error loading markdown:", error);
+    renderedDescription.value = "Error loading markdown content.";
+  }
+});
 </script>
 
 <style>
