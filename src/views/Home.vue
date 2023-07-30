@@ -1,5 +1,5 @@
 <template>
-  <div class="home-page flex flex-col items-center">
+  <div class="flex flex-col items-center">
     <div class="header my-8 text-6xl font-bold text-neutral-200">Home</div>
     <div class="w-3/5 mx-auto">
     <div class="relative" style="padding-top: 56.25%;">
@@ -11,7 +11,7 @@
       ></iframe>
     </div>
   </div>
-    <div class="text-widget mt-8 text-center">
+    <div class="mt-8 text-center">
       <p class="max-w-[60%] mx-auto text-neutral-200 text-xl">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, lacus
         vitae porttitor venenatis, massa tortor bibendum purus, a tempor ligula
