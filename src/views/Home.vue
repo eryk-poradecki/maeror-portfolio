@@ -1,143 +1,33 @@
-<!-- IMAGE IN THE BACKGROUND -->
-
 <template>
-  <div v-for="category in categories" :key="category" class="pt-10">
-    <h1
-      v-if="hasProjectsInCategory(category)"
-      class="text-3xl font-bold text-center text-neutral-200"
-    >
-      {{ categoryNames[categories.indexOf(category)] }}
-    </h1>
-    <div
-      class="grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-10 p-8 max-w-[85%] mx-auto"
-    >
-      <div
-        v-for="project in projects"
-        :key="project.id"
-        class="relative overflow-hidden max-w-md mx-auto rounded-xl"
-        @click="openModal(project)"
-        style="cursor: pointer"
-      >
-        <div v-if="project.category === category">
-          <div class="group">
-            <div
-              class="px-3 py-3 relative z-10 opacity-0 group-hover:opacity-100"
-            >
-              <div class="flex justify-center items-center mb-2 absolute">
-                <h1 class="font-bold text-5xl text-white mt-5">
-                  {{ project.name }}
-                </h1>
-              </div>
-              <div class="flex pt-20">
-                <p class="text-lg text-white">{{ project.shortDescription }}</p>
-              </div>
-            </div>
-            <div
-              class="absolute inset-0 rounded-t-xl group-hover:opacity-30"
-              :style="{
-                backgroundImage: `url(${project.image})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }"
-            ></div>
-            <img
-              :src="project.image"
-              :alt="project.name"
-              class="opacity-0 h-36 object-cover"
-              style="visibility: hidden"
-            />
-          </div>
-        </div>
-      </div>
+  <div class="home-page flex flex-col items-center">
+    <div class="header my-8 text-6xl font-bold text-neutral-200">Home</div>
+    <div class="w-3/5 mx-auto">
+    <div class="relative" style="padding-top: 56.25%;">
+      <iframe
+        class="absolute top-0 left-0 w-full h-full"
+        src="https://www.youtube.com/embed/mgVNH1xXibE"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
     </div>
   </div>
-
-  <teleport to="body">
-    <PopupModal
-      v-if="isModalOpen"
-      :closeModal="closeModal"
-      :selectedProject="selectedProject"
-    />
-  </teleport>
+    <div class="text-widget mt-8 text-center">
+      <p class="max-w-[60%] mx-auto text-neutral-200 text-xl">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, lacus
+        vitae porttitor venenatis, massa tortor bibendum purus, a tempor ligula
+        risus ut mi. Quisque efficitur eros vel massa bibendum, sit amet pharetra
+        neque feugiat. Integer convallis congue metus, vel commodo velit volutpat
+        eu. Etiam eget ipsum ut eros elementum rhoncus. Phasellus pharetra
+        consectetur felis eget sagittis. Suspendisse a rhoncus tortor. Duis ac
+        lacus ut metus posuere cursus non quis tortor. Sed eget feugiat ipsum.
+      </p>
+    </div>
+  </div>
 </template>
 
-<!-- IMAGE ABOVE TEXT -->
+<script>
 
-<!-- <template>
-  <div v-for="category in categories" :key="category" class="pt-10">
-    <h1 v-if="hasProjectsInCategory(category)" class="text-3xl font-bold text-center text-neutral-200">
-      {{ categoryNames[categories.indexOf(category)] }}
-    </h1>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-10 p-8 max-w-[85%] mx-auto">
-      <div
-        v-for="project in projects"
-        :key="project.id"
-        class="bg-neutral-400 shadow-lg rounded-xl max-w-md mx-auto min-h-full"
-      >
-        <div v-if="project.category === category">
-          <img
-            :src="project.image"
-            :alt="project.name"
-            class="rounded-t-xl w-full h-72 object-cover"
-            @click="openModal(project)"
-            style="cursor: pointer"
-          />
-          <div class="px-3 py-3">
-            <div class="flex justify-center items-center mb-1">
-              <h1 class="font-bold text-2xl">{{ project.name }}</h1>
-            </div>
-            <p class="text-lg text-gray-900">{{ project.shortDescription }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <teleport to="body">
-      <PopupModal v-if="isModalOpen" :closeModal="closeModal" :selectedProject="selectedProject" />
-  </teleport>
-</template> -->
-
-<script setup>
-import { ref, onMounted, watch } from "vue";
-import projectsJson from "../assets/projects.json";
-import PopupModal from "../components/PopupModal.vue";
-
-const categories = ["game", "music", "asset"];
-const categoryNames = ["Games", "Music", "Assets"];
-
-const projects = ref([]);
-
-onMounted(() => {
-  projects.value = projectsJson;
-});
-
-const isModalOpen = ref(false);
-const selectedProject = ref(null);
-
-const openModal = (project) => {
-  selectedProject.value = project;
-  isModalOpen.value = true;
-};
-
-const closeModal = () => {
-  isModalOpen.value = false;
-};
-
-const hasProjectsInCategory = (category) => {
-  return projects.value.some((project) => project.category === category);
-};
-
-watch(isModalOpen, (newValue) => {
-  if (newValue) {
-    document.body.classList.add("modal-open");
-  } else {
-    document.body.classList.remove("modal-open");
-  }
-});
 </script>
+
 <style>
-.modal-open {
-  overflow: hidden;
-}
 </style>
