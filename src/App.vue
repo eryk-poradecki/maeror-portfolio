@@ -17,7 +17,7 @@ import Navbar from './components/Navbar.vue';
   min-height: 100vh;
   background-image: url("src/assets/bg.png"); /* Replace with the correct path to your background image */
   background-size: contain;
-  background-repeat: repeat-x;
+  background-repeat: repeat-x repeat-y;
 }
 
 </style>
