@@ -13,10 +13,11 @@ import Navbar from './components/Navbar.vue';
 </script>
 
 <style scoped>
-.custom-background{
-  background-color: #485461;
-  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+.custom-background {
   min-height: 100vh;
+  background-image: url("src/assets/bg.png"); /* Replace with the correct path to your background image */
+  background-size: contain;
+  background-repeat: repeat-x;
 }
 
 </style>
