@@ -40,15 +40,6 @@
 
       <div>
         <div v-html="renderedDescription" class="text-lg"></div>
-
-        <div v-if="selectedProject.technologies">
-          <h2 class="text-xl font-bold mt-4">Technologies:</h2>
-          <ul class="list-disc list-inside">
-            <li v-for="tech in selectedProject.technologies" :key="tech">
-              {{ tech }}
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
   </div>
@@ -56,7 +47,7 @@
 
 <script setup>
 import { onMounted, ref } from "vue";
-import { marked } from 'marked';
+import { marked } from "marked";
 
 const props = defineProps(["closeModal", "selectedProject"]);
 
