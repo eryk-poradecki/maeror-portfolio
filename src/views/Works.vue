@@ -1,69 +1,74 @@
 <!-- IMAGE IN THE BACKGROUND -->
 
 <template>
-    <div v-for="category in categories" :key="category" class="pt-10">
-      <h1
-        v-if="hasProjectsInCategory(category)"
-        class="text-3xl font-bold text-center text-neutral-200"
-      >
-        {{ categoryNames[categories.indexOf(category)] }}
-      </h1>
+  <div class="flex flex-col items-center">
+    <div class="header my-8 text-6xl font-bold text-neutral-200">Works</div>
+  </div>
+
+  <div v-for="category in categories" :key="category" class="pt-10">
+    <h1
+      v-if="hasProjectsInCategory(category)"
+      class="text-3xl font-bold text-center text-neutral-200"
+    >
+    {{ categoryNames[categories.indexOf(category)] }}
+    </h1>
+    <div
+      class="grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-10 p-8 w-[85%] mx-auto"
+    >
       <div
-        class="grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-10 p-8 max-w-[85%] mx-auto"
+        v-for="project in projects"
+        :key="project.id"
+        class="relative overflow-hidden max-w-md mx-auto rounded-xl"
+        :class="{'aspect-square': project.category === 'music'}"
+        @click="openModal(project)"
+        style="cursor: pointer"
       >
-        <div
-          v-for="project in projects"
-          :key="project.id"
-          class="relative overflow-hidden max-w-md mx-auto rounded-xl"
-          @click="openModal(project)"
-          style="cursor: pointer"
-        >
-          <div v-if="project.category === category">
-            <div class="group">
-              <div
-                class="px-3 py-3 relative z-10 opacity-0 group-hover:opacity-100"
-              >
-                <div class="flex justify-center items-center mb-2 absolute">
-                  <h1 class="font-bold text-5xl text-white mt-5">
-                    {{ project.name }}
-                  </h1>
-                </div>
-                <div class="flex pt-20">
-                  <p class="text-lg text-white">{{ project.shortDescription }}</p>
-                </div>
+        <div v-if="project.category === category">
+          <div class="group">
+            <div
+              class="px-3 py-3 relative z-10 opacity-0 group-hover:opacity-100"
+            >
+              <div class="flex justify-center items-center mb-2 absolute">
+                <h1 class="font-bold text-5xl text-white mt-5">
+                  {{ project.name }}
+                </h1>
               </div>
-              <div
-                class="absolute inset-0 rounded-t-xl group-hover:opacity-30"
-                :style="{
-                  backgroundImage: `url(${project.image})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }"
-              ></div>
-              <img
-                :src="project.image"
-                :alt="project.name"
-                class="opacity-0 h-36 object-cover"
-                style="visibility: hidden"
-              />
+              <div class="flex pt-20">
+                <p class="text-lg text-white">{{ project.shortDescription }}</p>
+              </div>
             </div>
+            <div
+              class="absolute inset-0 rounded-t-xl group-hover:opacity-30"
+              :style="{
+                backgroundImage: `url(${project.image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }"
+            ></div>
+            <img
+              :src="project.image"
+              :alt="project.name"
+              class="opacity-0 h-36 object-cover"
+              style="visibility: hidden"
+            />
           </div>
         </div>
       </div>
     </div>
-  
-    <teleport to="body">
-      <PopupModal
-        v-if="isModalOpen"
-        :closeModal="closeModal"
-        :selectedProject="selectedProject"
-      />
-    </teleport>
-  </template>
-  
-  <!-- IMAGE ABOVE TEXT -->
-  
-  <!-- <template>
+  </div>
+
+  <teleport to="body">
+    <PopupModal
+      v-if="isModalOpen"
+      :closeModal="closeModal"
+      :selectedProject="selectedProject"
+    />
+  </teleport>
+</template>
+
+<!-- IMAGE ABOVE TEXT -->
+
+<!-- <template>
     <div v-for="category in categories" :key="category" class="pt-10">
       <h1 v-if="hasProjectsInCategory(category)" class="text-3xl font-bold text-center text-neutral-200">
         {{ categoryNames[categories.indexOf(category)] }}
@@ -97,48 +102,47 @@
         <PopupModal v-if="isModalOpen" :closeModal="closeModal" :selectedProject="selectedProject" />
     </teleport>
   </template> -->
-  
-  <script setup>
-  import { ref, onMounted, watch } from "vue";
-  import projectsJson from "../assets/projects.json";
-  import PopupModal from "../components/PopupModal.vue";
-  
-  const categories = ["game", "music", "asset"];
-  const categoryNames = ["Games", "Music", "Assets"];
-  
-  const projects = ref([]);
-  
-  onMounted(() => {
-    projects.value = projectsJson;
-  });
-  
-  const isModalOpen = ref(false);
-  const selectedProject = ref(null);
-  
-  const openModal = (project) => {
-    selectedProject.value = project;
-    isModalOpen.value = true;
-  };
-  
-  const closeModal = () => {
-    isModalOpen.value = false;
-  };
-  
-  const hasProjectsInCategory = (category) => {
-    return projects.value.some((project) => project.category === category);
-  };
-  
-  watch(isModalOpen, (newValue) => {
-    if (newValue) {
-      document.body.classList.add("modal-open");
-    } else {
-      document.body.classList.remove("modal-open");
-    }
-  });
-  </script>
-  <style>
-  .modal-open {
-    overflow: hidden;
+
+<script setup>
+import { ref, onMounted, watch } from "vue";
+import projectsJson from "../assets/projects.json";
+import PopupModal from "../components/PopupModal.vue";
+
+const categories = ["game", "music", "asset"];
+const categoryNames = ["Games", "Music", "Assets"];
+
+const projects = ref([]);
+
+onMounted(() => {
+  projects.value = projectsJson;
+});
+
+const isModalOpen = ref(false);
+const selectedProject = ref(null);
+
+const openModal = (project) => {
+  selectedProject.value = project;
+  isModalOpen.value = true;
+};
+
+const closeModal = () => {
+  isModalOpen.value = false;
+};
+
+const hasProjectsInCategory = (category) => {
+  return projects.value.some((project) => project.category === category);
+};
+
+watch(isModalOpen, (newValue) => {
+  if (newValue) {
+    document.body.classList.add("modal-open");
+  } else {
+    document.body.classList.remove("modal-open");
   }
-  </style>
-  
+});
+</script>
+<style>
+.modal-open {
+  overflow: hidden;
+}
+</style>
