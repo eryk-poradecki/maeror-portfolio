@@ -6,9 +6,37 @@
         :src="getYouTubeEmbedLink(selectedProject.youtubeLink)"
         allowfullscreen
       ></iframe>
-      <h1 class="text-5xl font-bold mt-5 mb-10 hover:text-gray-700">
-        {{ selectedProject.name }}
-      </h1>
+      <div class="flex items-center">
+        <h1 class="text-5xl font-bold mt-5 mb-10 mr-10 hover:text-gray-700">
+          {{ selectedProject.name }}
+        </h1>
+
+        <div class="flex items-center space-x-4">
+          <a
+            v-if="selectedProject.liveDemoLink"
+            :href="selectedProject.liveDemoLink"
+            target="_blank"
+          >
+            <img
+              src="/src/assets/svg/itchio-badge.svg"
+              alt="Live Demo"
+              class="h-8 w-auto cursor-pointer mb-3"
+            />
+          </a>
+
+          <a
+            v-if="selectedProject.githubLink"
+            :href="selectedProject.githubLink"
+            target="_blank"
+          >
+            <img
+              src="/src/assets/svg/github-mark.svg"
+              alt="GitHub"
+              class="h-8 w-auto cursor-pointer bg-white rounded-full mb-3"
+            />
+          </a>
+        </div>
+      </div>
 
       <div>
         <div v-html="renderedDescription" class="text-lg"></div>
@@ -21,33 +49,6 @@
             </li>
           </ul>
         </div>
-
-        <div v-if="selectedProject.liveDemoLink" class="mt-6">
-          <a
-            class="mt-6 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-            :href="selectedProject.liveDemoLink"
-            target="_blank"
-          >
-            Live Demo
-          </a>
-        </div>
-
-        <div v-if="selectedProject.githubLink" class="mt-6">
-          <a
-            class="mt-6 px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700"
-            :href="selectedProject.githubLink"
-            target="_blank"
-          >
-            GitHub
-          </a>
-        </div>
-
-        <button
-          class="mt-6 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
-          @click="closeModal()"
-        >
-          Close
-        </button>
       </div>
     </div>
   </div>
