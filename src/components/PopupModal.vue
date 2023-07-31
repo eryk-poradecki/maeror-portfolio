@@ -1,6 +1,6 @@
 <template>
   <div @click="closeAndNotifyParent">
-    <div class="bg-neutral-800" @click.stop>
+    <div @click.stop>
       <component
         v-if="selectedProject"
         :is="popoutComponent"
@@ -34,3 +34,4 @@ if (props.selectedProject) {
   }
 }
 </script>
+
