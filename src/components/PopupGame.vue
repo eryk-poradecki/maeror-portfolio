@@ -100,5 +100,6 @@ onMounted(async () => {
   padding: 20px;
   border-radius: 10px;
   color: white;
+  background-image: url("src/assets/bg-brighter.png");
 }
 </style>
