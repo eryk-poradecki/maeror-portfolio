@@ -10,7 +10,13 @@
       v-if="hasProjectsInCategory(category)"
       class="text-3xl font-bold text-center text-neutral-200"
     >
-    {{ categoryNames[categories.indexOf(category)] }}
+      <div class="relative flex py-5 items-center">
+        <div class="flex-grow border-t border-gray-400"></div>
+        <span class="flex-shrink mx-4 text-neutral-200">{{
+          categoryNames[categories.indexOf(category)]
+        }}</span>
+        <div class="flex-grow border-t border-gray-400"></div>
+      </div>
     </h1>
     <div
       class="grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-10 p-8 w-[85%] mx-auto"
@@ -18,8 +24,7 @@
       <div
         v-for="project in projects"
         :key="project.id"
-        class="relative overflow-hidden max-w-md mx-auto rounded-xl"
-        :class="{'aspect-square': project.category === 'music'}"
+        class="aspect-square relative overflow-hidden max-w-md mx-auto rounded-xl"
         @click="openModal(project)"
         style="cursor: pointer"
       >
