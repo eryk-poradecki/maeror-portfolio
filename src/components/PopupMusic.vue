@@ -33,13 +33,14 @@
 
       <div v-if="selectedProject.soundcloudLink" class="mt-6">
         <iframe
-          class="mt-6 px-4 py-2 mb-5 bg-orange-500 text-white rounded hover:bg-orange-600"
+        style="border-radius: 12px"
+          :src="getSoundCloudEmbedLink()"
           width="100%"
           height="152"
-          :src="getSoundCloudEmbedLink()"
-          frameborder="0"
-          allow="autoplay"
-          allowfullscreen
+          frameBorder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
         ></iframe>
       </div>
 
