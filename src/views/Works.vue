@@ -24,7 +24,7 @@
       <div
         v-for="project in projects"
         :key="project.id"
-        class="aspect-square relative overflow-hidden max-w-md mx-auto rounded-xl"
+        class="aspect-square relative overflow-hidden max-w-md mx-auto rounded-xl hover:scale-110 transition-all"
         @click="openModal(project)"
         style="cursor: pointer"
       >
