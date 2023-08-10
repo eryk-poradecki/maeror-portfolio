@@ -21,7 +21,7 @@
         <div class="flex flex-col items-center">
           <img
             class="w-36 h-36 rounded-full"
-            src="src/assets/maeror-avatar.png"
+            src="../assets/maeror-avatar.png"
             alt=""
             width="384"
             height="512"
@@ -71,7 +71,7 @@
             rel="noopener noreferrer"
           >
             <img
-              src="src/assets/svg/github-mark.svg"
+              src="../assets/svg/github-mark.svg"
               alt="GitHub"
               class="w-8 h-8 mt-5"
             />
@@ -82,7 +82,7 @@
             rel="noopener noreferrer"
           >
             <img
-              src="src/assets/svg/spotify-mark.svg"
+              src="../assets/svg/spotify-mark.svg"
               alt="Spotify"
               class="w-8 h-8 mt-5 ml-4"
             />
@@ -93,7 +93,7 @@
             rel="noopener noreferrer"
           >
             <img
-              src="src/assets/svg/soundcloud-mark.svg"
+              src="../assets/svg/soundcloud-mark.svg"
               alt="Soundcloud"
               class="w-8 h-8 mt-5 ml-4"
             />
@@ -104,7 +104,7 @@
             rel="noopener noreferrer"
           >
             <img
-              src="src/assets/svg/bandcamp-mark.svg"
+              src="../assets/svg/bandcamp-mark.svg"
               alt="Bandcamp"
               class="w-8 h-8 mt-5 ml-4"
             />
