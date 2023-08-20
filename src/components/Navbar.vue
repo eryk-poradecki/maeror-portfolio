@@ -2,7 +2,7 @@
   <nav class="p-4">
     <div class="flex items-center justify-between">
       <div class="flex items-center">
-        <a href="/" class="flex items-center">
+        <a href="/portfolio/" class="flex items-center">
         <img
           class="w-24 h-24 rounded-full"
           src="../assets/maeror-avatar.png"
