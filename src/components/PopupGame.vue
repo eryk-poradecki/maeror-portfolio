@@ -18,7 +18,7 @@
             target="_blank"
           >
             <img
-              src="/src/assets/svg/itchio-badge.svg"
+              src="/svg/itchio-badge.svg"
               alt="Live Demo"
               class="h-8 w-auto cursor-pointer mb-3"
             />
@@ -30,7 +30,7 @@
             target="_blank"
           >
             <img
-              src="/src/assets/svg/github-mark.svg"
+              src="/svg/github-mark.svg"
               alt="GitHub"
               class="h-8 w-auto cursor-pointer bg-white rounded-full mb-3"
             />
@@ -39,7 +39,7 @@
       </div>
 
       <div>
-        <div v-html="renderedDescription" class="text-lg"></div>
+        <div v-html="renderedDescription" class="prose prose-invert lg:prose-xl"></div>
       </div>
     </div>
   </div>
@@ -70,6 +70,7 @@ onMounted(async () => {
   try {
     const response = await fetch(props.selectedProject.longDescription);
     const markdownContent = await response.text();
+    console.log(markdownContent);
     renderedDescription.value = markdownToHTML(markdownContent);
   } catch (error) {
     console.error("Error loading markdown:", error);
@@ -100,6 +101,6 @@ onMounted(async () => {
   padding: 20px;
   border-radius: 10px;
   color: white;
-  background-image: url("../assets/bg-brighter.png");
+  background-image: url("/bg-brighter.png");
 }
 </style>
