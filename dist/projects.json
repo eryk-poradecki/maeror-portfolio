@@ -1,0 +1,45 @@
+[
+  {
+    "id": "0",
+    "name": "Silence",
+    "category": "game",
+    "shortDescription": "Together with a friend, take on the role of an agent and a hacker who must stop a military company from launching a dangerous combat robot.",
+    "longDescription": "../src/assets/projects/Silence/silence.md",
+    "image": "../src/assets/projects/silence/images/silence.png",
+    "liveDemoLink": "https://cladur.itch.io/silence",
+    "youtubeLink": "https://www.youtube.com/watch?v=smbrYnifdPU&ab_channel=cladur",
+    "githubLink": "https://github.com/cladur/silence"
+  },
+  {
+    "id": "1",
+    "name": "Bat",
+    "category": "game",
+    "shortDescription": "Proident veniam officia tempor consectetur cillum cillum ipsum dolore nisi qui occaecat ipsum cupidatat proident.",
+    "longDescription": "../src/assets/projects/Silence/silence.md",
+    "image": "../src/assets/projects/bat/images/tube-nosed-bat.jpg",
+    "liveDemoLink": "https://example.com/project1",
+    "youtubeLink": "https://www.youtube.com/watch?v=smbrYnifdPU&ab_channel=cladur",
+    "githubLink": "https://github.com/cladur/silence"
+  },
+  {
+    "id": "2",
+    "name": "Lorem Ipsum",
+    "category": "game",
+    "shortDescription": "Dolor cillum aute sunt tempor. Culpa labore magna aute mollit. Labore cillum est labore id ullamco est culpa sit ad dolor nulla magna laboris. Sit dolore in in culpa. Officia reprehenderit non in ut consequat ea aliqua. Mollit ut pariatur proident eu nulla sint officia commodo.",
+    "image": "../src/assets/projects/lorem/images/Untitled-1.png",
+    "liveDemoLink": "https://example.com/project1",
+    "youtubeLink": "https://www.youtube.com/watch?v=smbrYnifdPU&ab_channel=cladur",
+    "githubLink": "https://github.com/cladur/silence"
+  },
+  {
+    "id": "3",
+    "name": "Hide Away",
+    "category": "music",
+    "shortDescription": "Something new, this one was a bit of an experiment for me. Especially 'Do You Know' it's something completely different than my usual stuff. Hope you'll enjoy!",
+    "image": "../src/assets/maeror-avatar.png",
+    "spotifyLink": "https://open.spotify.com/track/17gFHzECRd4d6ghugQQRFL?si=c005f1942dd24fc4",
+    "soundcloudLink": "https://soundcloud.com/maerormusic/hide-away",
+    "soundcloudId": "1547715244",
+    "spotifyId": "17gFHzECRd4d6ghugQQRFL?utm_source=generator"
+  }
+]
