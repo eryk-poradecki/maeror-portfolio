@@ -11,7 +11,7 @@
         <!-- <div class="flex items-center">
           <img
             class="w-24 h-24 rounded-full mx-auto"
-            src="src/assets/maeror-avatar.png"
+            src="/maeror-avatar.png"
             alt=""
             width="384"
             height="512"
@@ -21,7 +21,7 @@
         <div class="flex flex-col items-center">
           <img
             class="w-36 h-36 rounded-full"
-            src="../assets/maeror-avatar.png"
+            src="/maeror-avatar.png"
             alt=""
             width="384"
             height="512"
@@ -71,7 +71,7 @@
             rel="noopener noreferrer"
           >
             <img
-              src="../assets/svg/github-mark.svg"
+              src="/svg/github-mark.svg"
               alt="GitHub"
               class="w-8 h-8 mt-5"
             />
@@ -82,7 +82,7 @@
             rel="noopener noreferrer"
           >
             <img
-              src="../assets/svg/spotify-mark.svg"
+              src="/svg/spotify-mark.svg"
               alt="Spotify"
               class="w-8 h-8 mt-5 ml-4"
             />
@@ -93,7 +93,7 @@
             rel="noopener noreferrer"
           >
             <img
-              src="../assets/svg/soundcloud-mark.svg"
+              src="/svg/soundcloud-mark.svg"
               alt="Soundcloud"
               class="w-8 h-8 mt-5 ml-4"
             />
@@ -104,7 +104,7 @@
             rel="noopener noreferrer"
           >
             <img
-              src="../assets/svg/bandcamp-mark.svg"
+              src="/svg/bandcamp-mark.svg"
               alt="Bandcamp"
               class="w-8 h-8 mt-5 ml-4"
             />
@@ -120,7 +120,7 @@
 export default {
   data() {
     return {
-      resumeUrl: "src/assets/Eryk Poradecki.pdf",
+      resumeUrl: "/Eryk Poradecki.pdf",
       showResume: false,
     };
   },

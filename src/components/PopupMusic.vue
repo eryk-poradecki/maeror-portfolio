@@ -11,7 +11,7 @@
           target="_blank"
         >
           <img
-            src="/src/assets/svg/spotify-mark.svg"
+            src="/svg/spotify-mark.svg"
             alt="Live Demo"
             class="h-8 w-auto cursor-pointer mb-3"
           />
@@ -23,7 +23,7 @@
           target="_blank"
         >
           <img
-            src="/src/assets/svg/soundcloud-mark.svg"
+            src="/svg/soundcloud-mark.svg"
             alt="GitHub"
             class="h-8 w-auto cursor-pointer bg-neutral-300 rounded-full mb-3"
           />

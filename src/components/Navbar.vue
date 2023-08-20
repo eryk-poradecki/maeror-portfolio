@@ -5,7 +5,7 @@
         <a href="/portfolio/" class="flex items-center">
         <img
           class="w-24 h-24 rounded-full"
-          src="../assets/maeror-avatar.png"
+          src="/maeror-avatar.png"
           alt=""
           width="384"
           height="512"
