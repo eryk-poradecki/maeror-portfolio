@@ -21,14 +21,13 @@
     <div
       class="grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-10 p-8 w-[85%] mx-auto"
     >
-      <div
-        v-for="project in projects"
-        :key="project.id"
-        class="aspect-square relative overflow-hidden max-w-md mx-auto rounded-xl hover:scale-110 transition-all"
-        @click="openModal(project)"
-        style="cursor: pointer"
-      >
-        <div v-if="project.category === category">
+      <div v-for="project in filteredProjects(category)">
+        <div
+          :key="project.id"
+          class="aspect-square relative overflow-hidden max-w-md mx-auto rounded-xl hover:scale-110 transition-all"
+          style="cursor: pointer"
+          @click="handleTileClick(project)"
+        >
           <div class="group">
             <div
               class="px-3 py-3 relative z-10 opacity-0 group-hover:opacity-100"
@@ -113,8 +112,8 @@ import { ref, onMounted, watch } from "vue";
 import projectsJson from "/src/projects.json";
 import PopupModal from "../components/PopupModal.vue";
 
-const categories = ["game", "music", "asset"];
-const categoryNames = ["Games", "Music", "Assets"];
+const categories = ["game", "music", "asset", "service"];
+const categoryNames = ["Games", "Music", "Assets", "Discography"];
 
 const projects = ref([]);
 
@@ -145,6 +144,18 @@ watch(isModalOpen, (newValue) => {
     document.body.classList.remove("modal-open");
   }
 });
+
+const filteredProjects = (category) => {
+  return projects.value.filter((project) => project.category === category);
+};
+
+const handleTileClick = (project) => {
+  if (project.category === 'service') {
+    window.open(project.link, '_blank');
+  } else {
+    openModal(project);
+  }
+};
 </script>
 <style>
 .modal-open {
