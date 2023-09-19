@@ -110,7 +110,7 @@
 
 <script setup>
 import { ref, onMounted, watch } from "vue";
-import projectsJson from "../assets/projects.json";
+import projectsJson from "/src/projects.json";
 import PopupModal from "../components/PopupModal.vue";
 
 const categories = ["game", "music", "asset"];
