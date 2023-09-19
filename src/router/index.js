@@ -5,12 +5,12 @@ import Works from '../views/Works.vue'
 
 const routes = [
     {
-        path: '/portfolio/',
+        path: '/portfolio/home',
         name: 'home',
         component: Home,
     },
     {
-        path: '/portfolio/works',
+        path: '/portfolio/',
         name: 'works',
         component: Works,
     },
