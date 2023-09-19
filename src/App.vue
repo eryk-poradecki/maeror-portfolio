@@ -1,7 +1,8 @@
 <template>
     <div class="custom-background">
     <main>
-      <Navbar />
+      <!-- <Navbar /> -->
+      <NavbarSimple />
       <router-view />
     </main>
   </div>
@@ -9,6 +10,7 @@
 
 <script setup>
 import Navbar from './components/Navbar.vue';
+import NavbarSimple from './components/NavbarSimple.vue';
 
 </script>
 
