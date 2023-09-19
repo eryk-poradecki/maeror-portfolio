@@ -22,9 +22,7 @@
         <div v-for="project in filteredProjects(category)" :key="project.id">
           <div
             class="aspect-square relative overflow-hidden max-w-md mx-auto rounded-xl hover:scale-110 transition-all"
-            :style="{
-              cursor: project.category === 'service' ? 'pointer' : 'default',
-            }"
+            style="{cursor: pointer;}"
             @click="handleTileClick(project)"
           >
             <div class="group">
