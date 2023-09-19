@@ -33,13 +33,50 @@
   },
   {
     "id": "3",
-    "name": "Hide Away",
+    "name": "Spotify",
     "category": "music",
     "shortDescription": "Something new, this one was a bit of an experiment for me. Especially 'Do You Know' it's something completely different than my usual stuff. Hope you'll enjoy!",
     "image": "maeror-avatar.png",
+    "embedLink": "https://open.spotify.com/embed/artist/1qBtLLu4Z7x3Dar7iiNR39?utm_source=generator&theme=0",
     "spotifyLink": "https://open.spotify.com/track/17gFHzECRd4d6ghugQQRFL?si=c005f1942dd24fc4",
     "soundcloudLink": "https://soundcloud.com/maerormusic/hide-away",
     "soundcloudId": "1547715244",
     "spotifyId": "17gFHzECRd4d6ghugQQRFL?utm_source=generator"
+  },
+  {
+    "id": "4",
+    "name": "Soundcloud",
+    "category": "music",
+    "shortDescription": "Something new, this one was a bit of an experiment for me. Especially 'Do You Know' it's something completely different than my usual stuff. Hope you'll enjoy!",
+    "image": "maeror-avatar.png",
+    "embedLink": "",
+    "spotifyLink": "https://open.spotify.com/track/17gFHzECRd4d6ghugQQRFL?si=c005f1942dd24fc4",
+    "soundcloudLink": "https://soundcloud.com/maerormusic/hide-away",
+    "soundcloudId": "1547715244",
+    "spotifyId": "17gFHzECRd4d6ghugQQRFL?utm_source=generator"
+  },
+  {
+    "id": "5",
+    "name": "Spotify",
+    "category": "service",
+    "link": "https://open.spotify.com/artist/1qBtLLu4Z7x3Dar7iiNR39",
+    "shortDescription": "Something new, this one was a bit of an experiment for me. Especially 'Do You Know' it's something completely different than my usual stuff. Hope you'll enjoy!",
+    "image": "maeror-avatar.png"
+  },
+  {
+    "id": "6",
+    "name": "Soundcloud",
+    "category": "service",
+    "link": "https://soundcloud.com/maerormusic",
+    "shortDescription": "Something new, this one was a bit of an experiment for me. Especially 'Do You Know' it's something completely different than my usual stuff. Hope you'll enjoy!",
+    "image": "maeror-avatar.png"
+  },
+  {
+    "id": "7",
+    "name": "Bandcamp",
+    "category": "service",
+    "link": "https://maerormusic.bandcamp.com/music",
+    "shortDescription": "Something new, this one was a bit of an experiment for me. Especially 'Do You Know' it's something completely different than my usual stuff. Hope you'll enjoy!",
+    "image": "maeror-avatar.png"
   }
 ]

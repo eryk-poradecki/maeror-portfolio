@@ -70,7 +70,6 @@ onMounted(async () => {
   try {
     const response = await fetch(props.selectedProject.longDescription);
     const markdownContent = await response.text();
-    console.log(markdownContent);
     renderedDescription.value = markdownToHTML(markdownContent);
   } catch (error) {
     console.error("Error loading markdown:", error);
