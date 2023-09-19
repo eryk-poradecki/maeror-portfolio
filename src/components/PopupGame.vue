@@ -56,6 +56,7 @@ const closeAndNotifyParent = () => {
 };
 
 const getYouTubeEmbedLink = (youtubeLink) => {
+  if (!youtubeLink) return "";
   const videoId = youtubeLink.split("v=")[1].split("&")[0];
   return `https://www.youtube.com/embed/${videoId}`;
 };
