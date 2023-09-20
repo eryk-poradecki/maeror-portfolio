@@ -112,8 +112,8 @@ import { ref, onMounted, watch } from "vue";
 import projectsJson from "/src/projects.json";
 import PopupModal from "../components/PopupModal.vue";
 
-const categories = ["game", "music", "asset", "service"];
-const categoryNames = ["Games", "Music", "Assets", "Discography"];
+const categories = ["game", "music", "asset", "service", "sound_redesign"];
+const categoryNames = ["Games", "Music", "Assets", "Discography", "Sound Redesign"];
 
 const projects = ref([]);
 
@@ -150,7 +150,7 @@ const filteredProjects = (category) => {
 };
 
 const handleTileClick = (project) => {
-  if (project.category === "service") {
+  if (project.category === "service" || project.category === "sound_redesign") {
     window.open(project.link, "_blank");
   } else {
     openModal(project);

@@ -11,7 +11,7 @@
         <!-- <div class="flex items-center">
           <img
             class="w-24 h-24 rounded-full mx-auto"
-            src="/maeror-avatar.png"
+            src="/maeror-avatar.jpg"
             alt=""
             width="384"
             height="512"
@@ -21,7 +21,7 @@
         <div class="flex flex-col items-center">
           <img
             class="w-36 h-36 rounded-full"
-            src="/maeror-avatar.png"
+            src="/maeror-avatar.jpg"
             alt=""
             width="384"
             height="512"
