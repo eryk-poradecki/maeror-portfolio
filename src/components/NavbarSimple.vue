@@ -4,7 +4,7 @@
         <div class="flex items-center">
           <img
             class="w-24 h-24 rounded-full"
-            src="/maeror-avatar.png"
+            src="/maeror-avatar.jpg"
             alt=""
             width="384"
             height="512"
