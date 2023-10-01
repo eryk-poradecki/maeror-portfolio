@@ -2,12 +2,12 @@
 
 <template>
   <div class="flex flex-col items-center">
-    <div class="header my-8 text-6xl font-bold text-neutral-200">Works</div>
+    <div class="header my-8 text-8xl font-bold text-neutral-200">Works</div>
   </div>
 
   <div v-for="category in categories" :key="category">
     <template v-if="hasProjectsInCategory(category)">
-      <h1 class="text-3xl font-bold text-center text-neutral-200">
+      <h1 class="text-5xl font-normal text-center text-neutral-200">
         <div class="relative flex py-5 items-center">
           <div class="flex-grow border-t border-gray-400"></div>
           <span class="flex-shrink mx-4 text-neutral-200">{{
@@ -17,7 +17,7 @@
         </div>
       </h1>
       <div
-        class="grid grid-cols-1 md:grid-cols-3 gap-x-5 gap-y-10 p-8 w-[85%] mx-auto"
+        class="grid grid-cols-1 md:grid-cols-4 gap-x-5 gap-y-10 p-8 w-[75%] mx-auto"
       >
         <div v-for="project in filteredProjects(category)" :key="project.id">
           <div
@@ -30,7 +30,7 @@
                 class="px-3 py-3 relative z-10 opacity-0 group-hover:opacity-100"
               >
                 <div class="flex justify-center items-center mb-2 absolute">
-                  <h1 class="font-bold text-5xl text-white mt-5">
+                  <h1 class="font-normal text-5xl text-white mt-5">
                     {{ project.name }}
                   </h1>
                 </div>
@@ -112,8 +112,8 @@ import { ref, onMounted, watch } from "vue";
 import projectsJson from "/src/projects.json";
 import PopupModal from "../components/PopupModal.vue";
 
-const categories = ["game", "music", "asset", "service", "sound_redesign"];
-const categoryNames = ["Games", "Music", "Assets", "Discography", "Sound Redesign"];
+const categories = ["game", "music", "sound_redesign", "asset", "service"];
+const categoryNames = ["Games", "Music", "Sound Redesign","Assets", "Discography"];
 
 const projects = ref([]);
 

@@ -47,8 +47,16 @@
     "id": "7",
     "name": "Moonlighter Golem Dungeon Redesign",
     "category": "sound_redesign",
-    "link": "https://www.youtube.com/watch?v=WbVIbuEJHiQ&ab_channel=MaerorSoundDesign",
+    "link": "https://www.youtube.com/watch?v=cK5HKYTlyFU&ab_channel=MaerorSoundDesign",
     "shortDescription": "",
-    "image": "moonlightergolemdungeon.jpg"
+    "image": "moonlighter_golem.jpg"
+  },
+  {
+    "id": "8",
+    "name": "Cyberpunk 2077 UI Sound Redesign",
+    "category": "sound_redesign",
+    "link": "https://www.youtube.com/watch?v=xnCoMu19BFE&ab_channel=MaerorSoundDesign",
+    "shortDescription": "",
+    "image": "cp2077_portfolio.jpg"
   }
 ]
