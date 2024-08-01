@@ -16,7 +16,7 @@ export default {
       '5xl': '3.252rem',
       '6xl': '3.815rem',
       '7xl': '4.768rem',
-      '8xl': '6.443rem',
+      '8xl': '6.445rem',
     }
   },
   plugins: [

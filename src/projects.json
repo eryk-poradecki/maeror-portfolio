@@ -22,7 +22,7 @@
   {
     "id": "4",
     "name": "Spotify",
-    "category": "service",
+    "category": "music",
     "link": "https://open.spotify.com/artist/1qBtLLu4Z7x3Dar7iiNR39",
     "shortDescription": "",
     "image": "maeror_spotify.jpg"
@@ -30,7 +30,7 @@
   {
     "id": "5",
     "name": "Soundcloud",
-    "category": "service",
+    "category": "music",
     "link": "https://soundcloud.com/maerormusic",
     "shortDescription": "",
     "image": "maeror_sc.jpg"
@@ -38,7 +38,7 @@
   {
     "id": "6",
     "name": "Bandcamp",
-    "category": "service",
+    "category": "music",
     "link": "https://maerormusic.bandcamp.com/music",
     "shortDescription": "",
     "image": "maeror_bc.jpg"
@@ -58,5 +58,31 @@
     "link": "https://www.youtube.com/watch?v=xnCoMu19BFE&ab_channel=MaerorSoundDesign",
     "shortDescription": "",
     "image": "cp2077_portfolio.jpg"
+  },
+  {
+    "id": "9",
+    "name": "Xerath Abilities Sound Redesign",
+    "category": "sound_redesign",
+    "link": "https://www.youtube.com/watch?v=0pvG_Ksb_qQ&ab_channel=MaerorSoundDesign",
+    "shortDescription": "",
+    "image": "xerath_portfolio.jpg"
+  },
+  {
+    "id": "10",
+    "name": "Neeko Abilities Sound Redesign",
+    "category": "sound_redesign",
+    "link": "https://www.youtube.com/watch?v=glDQNhxFKrs&ab_channel=MaerorSoundDesign",
+    "shortDescription": "",
+    "image": "neeko_protfolio.jpg"
+  },
+  {
+    "id": "11",
+    "name": "Rogue Rhythm",
+    "category": "released",
+    "liveDemoLink": "https://store.steampowered.com/app/3091990/Rogue_Rhythm/",
+    "shortDescription": "A roguelike with rhythm-game combat and procedural dungeons.",
+    "longDescription": "projects/RogueRhythm/rr.md",
+    "image": "projects/RogueRhythm/RR_Game.jpg",
+    "youtubeLink": "https://www.youtube.com/watch?v=XBwdle7DUZQ&ab_channel=AsaX"
   }
 ]
