@@ -25,6 +25,18 @@
           </a>
 
           <a
+            v-if="selectedProject.steamLink"
+            :href="selectedProject.steamLink"
+            target="_blank"
+          >
+            <img
+              src="/svg/steam-mark.svg"
+              alt="Steam"
+              class="h-8 w-auto cursor-pointer mb-3"
+            />
+          </a>
+
+          <a
             v-if="selectedProject.githubLink"
             :href="selectedProject.githubLink"
             target="_blank"
