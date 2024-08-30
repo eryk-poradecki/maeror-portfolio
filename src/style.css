@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@font-face {
+    font-family: klik_font;
+    src: url(assets/Klik-Light.otf);
+  }
 
 @tailwind base;
 @tailwind components;

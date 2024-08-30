@@ -26,12 +26,10 @@ const closeAndNotifyParent = () => {
 };
 
 if (props.selectedProject) {
-  if (props.selectedProject.category === "game") {
+  if (props.selectedProject.category === "game" || props.selectedProject.category === "released") {
     popoutComponent.value = markRaw(PopupGame);
   } else if (props.selectedProject.category === "music") {
     popoutComponent.value = markRaw(PopupMusic);
-  } else if (props.selectedProject.category === "asset") {
-    popoutComponent.value = markRaw(PopupAsset);
   }
 }
 </script>
