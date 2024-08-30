@@ -2,12 +2,12 @@
 
 <template>
   <div class="flex flex-col items-center">
-    <div class="header my-8 text-8xl font-bold text-neutral-200">Works</div>
+    <div class="header my-2 text-7xl font-bold text-neutral-200">Works</div>
   </div>
 
   <div v-for="category in categories" :key="category">
     <template v-if="hasProjectsInCategory(category)">
-      <h1 class="text-5xl font-normal text-center text-neutral-200">
+      <h1 class="text-4xl font-normal text-center text-neutral-200">
         <div class="relative flex py-5 items-center">
           <div class="flex-grow border-t border-gray-400"></div>
           <span class="flex-shrink mx-4 text-neutral-200">{{
@@ -17,11 +17,11 @@
         </div>
       </h1>
       <div
-        class="grid grid-cols-1 md:grid-cols-4 gap-x-5 gap-y-10 p-8 w-[75%] mx-auto"
+        class="grid grid-cols-1 md:grid-cols-4 gap-x-5 gap-y-10 p-8 w-[70%] mx-auto"
       >
         <div v-for="project in filteredProjects(category)" :key="project.id">
           <div
-            class="aspect-square leading-tight relative overflow-hidden max-w-md mx-auto rounded-xl hover:scale-110 transition-all"
+            class="aspect-square leading-tight relative overflow-hidden max-w-xs mx-auto rounded-xl hover:scale-110 transition-all"
             style="cursor: pointer;"
             @click="handleTileClick(project)"
           >
