@@ -16,44 +16,35 @@
           <div class="flex-grow border-t border-gray-400"></div>
         </div>
       </h1>
-      <div
-        class="grid grid-cols-1 md:grid-cols-4 gap-x-5 gap-y-10 p-8 w-[75%] mx-auto"
-      >
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-x-5 gap-y-10 p-8 w-[75%] mx-auto">
         <div v-for="project in filteredProjects(category)" :key="project.id">
           <div
             class="aspect-square leading-tight relative overflow-hidden max-w-md mx-auto rounded-xl hover:scale-110 transition-all"
-            style="cursor: pointer;"
-            @click="handleTileClick(project)"
-          >
+            style="cursor: pointer;" @click="handleTileClick(project)">
             <div class="group">
-              <div
-                class="px-3 py-3 relative z-10 opacity-0 group-hover:opacity-100"
-              >
-                <div class="flex justify-center items-center mb-2 absolute">
-                  <h1 class="font-normal text-4xl md:text-3xl text-white mt-5">
+              <div class="px-3 py-3 relative z-10 opacity-0 group-hover:opacity-100">
+                <div class="flex mb-2">
+                  <h1 class="font-normal text-4xl md:text-3xl text-white mt-5" :class="{
+                    'text-3xl': project.name.length > 20,
+                    'text-4xl': project.name.length > 15 && project.name.length <= 20,
+                    'text-5xl': project.name.length <= 15,
+                  }">
                     {{ project.name }}
-                  </h1>
+                  </h1>>
                 </div>
-                <div class="flex pt-20">
+                <div class="flex">
                   <p class="text-lg text-white">
                     {{ project.shortDescription }}
                   </p>
                 </div>
               </div>
-              <div
-              class="absolute inset-0 rounded-t-xl group-hover:opacity-20"
-                :style="{
-                  backgroundImage: `url(${project.image})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }"
-              ></div>
-              <img
-                :src="project.image"
-                :alt="project.name"
-                class="opacity-0 h-36 object-cover"
-                style="visibility: hidden"
-              />
+              <div class="absolute inset-0 rounded-t-xl group-hover:opacity-20" :style="{
+                backgroundImage: `url(${project.image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }"></div>
+              <img :src="project.image" :alt="project.name" class="opacity-0 h-36 object-cover"
+                style="visibility: hidden" />
             </div>
           </div>
         </div>
@@ -62,11 +53,7 @@
   </div>
 
   <teleport to="body">
-    <PopupModal
-      v-if="isModalOpen"
-      :closeModal="closeModal"
-      :selectedProject="selectedProject"
-    />
+    <PopupModal v-if="isModalOpen" :closeModal="closeModal" :selectedProject="selectedProject" />
   </teleport>
 </template>
 
