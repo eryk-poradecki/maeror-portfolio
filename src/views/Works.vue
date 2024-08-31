@@ -19,7 +19,7 @@
       <div class="grid grid-cols-1 md:grid-cols-4 gap-x-5 gap-y-10 p-8 w-[75%] mx-auto">
         <div v-for="project in filteredProjects(category)" :key="project.id">
           <div
-            class="aspect-square leading-tight relative overflow-hidden max-w-md mx-auto rounded-xl hover:scale-110 transition-all"
+            class="aspect-square leading-tight relative overflow-hidden max-w-xs mx-auto rounded-xl hover:scale-110 transition-all"
             style="cursor: pointer;" @click="handleTileClick(project)">
             <div class="group">
               <div class="px-3 py-3 relative z-10 opacity-0 group-hover:opacity-100">
