@@ -84,5 +84,13 @@
     "longDescription": "projects/RogueRhythm/rr.md",
     "image": "projects/RogueRhythm/RR_Game.jpg",
     "youtubeLink": "https://www.youtube.com/watch?v=XBwdle7DUZQ&ab_channel=AsaX"
+  },
+  {
+    "id": "12",
+    "name": "Foley Percussion Sample Pack",
+    "category": "asset",
+    "shortDescription": "Sample pack that contains 95 samples of gravel, wood, keys and knives. Recorded using Zoom H6 and Rode NTG3",
+    "image": "foleysamplepack.png",
+    "link": "https://maerormusic.bandcamp.com/album/maeror-foley-percussion-sample-pack"
   }
 ]

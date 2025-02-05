@@ -30,8 +30,6 @@ if (props.selectedProject) {
     popoutComponent.value = markRaw(PopupGame);
   } else if (props.selectedProject.category === "music") {
     popoutComponent.value = markRaw(PopupMusic);
-  } else if (props.selectedProject.category === "asset") {
-    popoutComponent.value = markRaw(PopupAsset);
   }
 }
 </script>
