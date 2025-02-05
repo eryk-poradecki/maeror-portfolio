@@ -1,19 +1,19 @@
 <template>
   <div @click="closeAndNotifyParent">
     <div @click.stop>
-        <div v-if="selectedProject">
-          <component
-            :is="popoutComponent"
-            :selectedProject="selectedProject"
-            :closeModal="closeModal"
-          />
-        </div>
+      <div v-if="selectedProject">
+        <component
+          :is="popoutComponent"
+          :selectedProject="selectedProject"
+          :closeModal="closeModal"
+        />
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { markRaw, ref } from "vue";
+import { markRaw, ref, watch } from "vue";
 import PopupGame from "./PopupGame.vue";
 import PopupMusic from "./PopupMusic.vue";
 import PopupAsset from "./PopupAsset.vue";
@@ -25,11 +25,21 @@ const closeAndNotifyParent = () => {
   props.closeModal();
 };
 
-if (props.selectedProject) {
-  if (props.selectedProject.category === "game" || props.selectedProject.category === "released") {
-    popoutComponent.value = markRaw(PopupGame);
-  } else if (props.selectedProject.category === "music") {
-    popoutComponent.value = markRaw(PopupMusic);
-  }
-}
+watch(
+  () => props.selectedProject,
+  (newProject) => {
+    if (newProject) {
+      const { categories } = newProject;
+      
+      if (categories.includes("game") || categories.includes("released")) {
+        popoutComponent.value = markRaw(PopupGame);
+      } else if (categories.length === 1 && categories.includes("music")) {
+        popoutComponent.value = markRaw(PopupMusic);
+      } else {
+        popoutComponent.value = markRaw(PopupAsset);
+      }
+    }
+  },
+  { immediate: true }
+);
 </script>

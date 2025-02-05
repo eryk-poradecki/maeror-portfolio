@@ -1,8 +1,8 @@
 <template>
     <div class="custom-background">
     <main>
-      <!-- <Navbar /> -->
-      <NavbarSimple />
+      <Navbar />
+      <!-- <NavbarSimple /> -->
       <router-view />
     </main>
   </div>

@@ -120,7 +120,7 @@
 export default {
   data() {
     return {
-      resumeUrl: "Eryk Poradecki.pdf",
+      resumeUrl: "cv.pdf",
       showResume: false,
     };
   },
