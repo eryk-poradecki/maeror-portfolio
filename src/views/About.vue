@@ -3,9 +3,7 @@
     <div class="header my-8 text-6xl font-bold text-neutral-200">About me</div>
   </div>
   <div class="flex flex-col items-center justify-center">
-    <div
-      class="shadow-lg rounded-xl w-[60%] mt-[2%] flex flex-col items-center justify-center"
-    >
+    <div class="shadow-lg rounded-xl w-[60%] mt-[2%] flex flex-col items-center justify-center">
       <div class="pb-[2%]">
         <!-- TEXT ON THE RIGHT OF THE AVATAR -->
         <!-- <div class="flex items-center">
@@ -19,13 +17,7 @@
           <h1 class="text-4xl font-bold text-white ml-4">Maeror</h1>
         </div> -->
         <div class="flex flex-col items-center">
-          <img
-            class="w-36 h-36 rounded-full"
-            src="/maeror-avatar.jpg"
-            alt=""
-            width="384"
-            height="512"
-          />
+          <img class="w-36 h-36 rounded-full" src="/maeror-avatar.jpg" alt="" width="384" height="512" />
           <h1 class="text-4xl font-bold text-center text-white mt-4">
             Hubert Łabuda
           </h1>
@@ -42,7 +34,7 @@
             posuere cursus non quis tortor. Sed eget feugiat ipsum.
           </p>
         </div>
-        <div>
+        <!-- <div>
           <div class="flex items-center justify-center mt-5">
             <button
               @click="openResume"
@@ -63,54 +55,57 @@
               <iframe :src="resumeUrl" class="w-full h-full"></iframe>
             </div>
           </div>
+        </div> -->
+        <div class="flex flex-col items-center mt-10">
+          <div class="flex justify-center items-center space-x-4">
+            <a class="flex items-center" href="https://github.com/Maerorr" target="_blank" rel="noopener noreferrer">
+              <img src="/svg/github-mark.svg" alt="GitHub" class="w-8 h-8" />
+            </a>
+            <span class="text-white">Maerorr</span>
+
+            <a class="flex items-center" href="mailto:maerormusic@gmail.com" target="_blank" rel="noopener noreferrer">
+              <img src="/svg/gmail-mark.svg" alt="Gmail" class="w-8 h-8" />
+            </a>
+            <span class="text-white">maerormusic@gmail.com</span>
+
+          </div>
+
+          <div class="flex justify-center items-center space-x-4 mt-4">
+            <div class="flex items-center">
+              <img src="/svg/discord-mark.svg" alt="Discord" class="w-8 h-8" />
+            </div>
+            <span class="text-white">.maeror</span>
+
+            <a class="flex items-center" href="https://www.linkedin.com/in/hubert-labuda/" target="_blank" rel="noopener noreferrer">
+              <img src="/svg/linkedin-mark.svg" alt="LinkedIn" class="w-8 h-8" />
+            </a>
+            <span class="text-white">Hubert Łabuda</span>
+
+          </div>
+
+          <div class="flex justify-center items-center space-x-4 mt-4">
+            <a class="flex items-center" href="https://open.spotify.com/artist/1qBtLLu4Z7x3Dar7iiNR39" target="_blank"
+              rel="noopener noreferrer">
+              <img src="/svg/spotify-mark.svg" alt="Spotify" class="w-8 h-8" />
+            </a>
+            <span class="text-white">Maeror</span>
+
+            <a class="flex items-center" href="https://maerormusic.bandcamp.com/" target="_blank"
+              rel="noopener noreferrer">
+              <img src="/svg/bandcamp-mark.svg" alt="Bandcamp" class="w-8 h-8" />
+            </a>
+            <span class="text-white">maerormusic</span>
+
+            <a class="flex items-center" href="https://soundcloud.com/maerormusic" target="_blank"
+              rel="noopener noreferrer">
+              <img src="/svg/soundcloud-mark.svg" alt="Soundcloud" class="w-8 h-8" />
+            </a>
+            <span class="text-white">Maeror</span>
+
+          </div>
         </div>
-        <div class="flex justify-center items-center">
-          <a
-            href="https://github.com/Maerorr"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="/svg/github-mark.svg"
-              alt="GitHub"
-              class="w-8 h-8 mt-5"
-            />
-          </a>
-          <a
-            href="https://open.spotify.com/artist/1qBtLLu4Z7x3Dar7iiNR39"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="/svg/spotify-mark.svg"
-              alt="Spotify"
-              class="w-8 h-8 mt-5 ml-4"
-            />
-          </a>
-          <a
-            href="https://soundcloud.com/maerormusic"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="/svg/soundcloud-mark.svg"
-              alt="Soundcloud"
-              class="w-8 h-8 mt-5 ml-4"
-            />
-          </a>
-          <a
-            href="https://maerormusic.bandcamp.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="/svg/bandcamp-mark.svg"
-              alt="Bandcamp"
-              class="w-8 h-8 mt-5 ml-4"
-            />
-          </a>
-        </div>
-        
+
+
       </div>
     </div>
   </div>
