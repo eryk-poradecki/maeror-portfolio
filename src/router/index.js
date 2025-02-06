@@ -1,11 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import GameDev from '../views/GameDev.vue'
 import About from '../views/About.vue'
-import Works from '../views/Works.vue'
 import Music from '../views/Music.vue'
 import SoundDesign from '../views/SoundDesign.vue'
 
 const routes = [
+    {
+        path: '/portfolio',
+        redirect: '/portfolio/about',
+    },
     {
         path: '/portfolio/game_dev',
         name: 'game_dev',
