@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 import GameDev from '../views/GameDev.vue'
 import About from '../views/About.vue'
 import Music from '../views/Music.vue'
@@ -6,33 +6,33 @@ import SoundDesign from '../views/SoundDesign.vue'
 
 const routes = [
     {
-        path: '/portfolio',
-        redirect: '/portfolio/about',
+        path: '',
+        redirect: '/about',
     },
     {
-        path: '/portfolio/game_dev',
+        path: '/game_dev',
         name: 'game_dev',
         component: GameDev,
     },
     {
-        path: '/portfolio/sound_design',
+        path: '/sound_design',
         name: 'sound_design',
         component: SoundDesign,
     },
     {
-        path: '/portfolio/music',
+        path: '/music',
         name: 'music',
         component: Music,
     },
     {
-        path: '/portfolio/about',
+        path: '/about',
         name: 'about',
         component: About,
     }
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes
 })
 
