@@ -10,4 +10,19 @@
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
+
+  <script>
+    const prefix = '/portfolio';
+  
+    if (
+      !location.hash &&
+      location.pathname.startsWith(prefix) &&
+      location.pathname !== prefix &&
+      !location.pathname.startsWith(`${prefix}/#`)
+    ) {
+      const relative = location.pathname.slice(prefix.length);
+      const newUrl = `${prefix}/#${relative}${location.search}${location.hash}`;
+      location.replace(newUrl);
+    }
+  </script>  
 </html>

@@ -60,7 +60,7 @@ import { ref, onMounted, watch } from "vue";
 import projectsJson from "/src/projects.json";
 import PopupModal from "../components/PopupModal.vue";
 
-const categories = ["dev_released", "game"];
+const categories = ["released", "wip"];
 const categoryNames = ["Released Games", "Unreleased/Projects/WIP Games"];
 
 const noPopupCategories = ["music", "sound_redesign", "asset"];
@@ -68,7 +68,9 @@ const noPopupCategories = ["music", "sound_redesign", "asset"];
 const projects = ref([]);
 
 onMounted(() => {
-  projects.value = projectsJson;
+  projects.value = projectsJson.filter(project => 
+    project.categories.includes("dev")
+  );
 });
 
 const isModalOpen = ref(false);
@@ -84,7 +86,7 @@ const closeModal = () => {
 };
 
 const hasProjectsInCategory = (category) => {
-  return projects.value.some((project) => project.categories.includes(category));
+  return projects.value.some((project) => project.status === category);
 };
 
 watch(isModalOpen, (newValue) => {
@@ -96,7 +98,7 @@ watch(isModalOpen, (newValue) => {
 });
 
 const filteredProjects = (category) => {
-  return projects.value.filter((project) => project.categories.includes(category));
+  return projects.value.filter((project) => project.status === category);
 };
 
 const handleTileClick = (project) => {

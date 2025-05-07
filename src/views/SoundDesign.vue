@@ -3,18 +3,21 @@
     <div class="header my-2 text-7xl font-bold text-neutral-200">Sound Design</div>
   </div>
 
-  <div v-for="(categoryName, categoryKey) in categories" :key="categoryKey">
-    <template v-if="hasProjectsInCategory(categoryKey)">
+  <div v-for="category in categories" :key="category">
+    <template v-if="hasProjectsInCategory(category)">
       <h1 class="text-4xl font-normal text-center text-neutral-200">
         <div class="relative flex py-5 items-center">
           <div class="flex-grow border-t border-gray-400"></div>
-          <span class="flex-shrink mx-4 text-neutral-200">{{ categoryName }}</span>
+          <span class="flex-shrink mx-4 text-neutral-200">{{
+            categoryNames[categories.indexOf(category)]
+          }}</span>
           <div class="flex-grow border-t border-gray-400"></div>
         </div>
       </h1>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-x-5 gap-y-5 p-8 w-[75%] mx-auto">
-        <div v-for="project in filteredProjects(categoryKey)" :key="project.id">
-          <div class="aspect-square leading-tight relative overflow-hidden max-w-xs mx-auto rounded-xl hover:scale-110 transition-all"
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-x-5 gap-y-10 p-8 w-[75%] mx-auto">
+        <div v-for="project in filteredProjects(category)" :key="project.id">
+          <div
+            class="aspect-square leading-tight relative overflow-hidden max-w-xs mx-auto rounded-xl hover:scale-110 transition-all"
             style="cursor: pointer;" @click="handleTileClick(project)">
             <div class="group">
               <div class="px-3 py-3 relative z-10 opacity-0 group-hover:opacity-100">
@@ -57,22 +60,26 @@ import { ref, onMounted, watch } from "vue";
 import projectsJson from "/src/projects.json";
 import PopupModal from "../components/PopupModal.vue";
 
-const categories = {
-  released: "Released Games",
-  game: "Unreleased/Projects/WIP Games",
-  asset: "Assets",
-  sound_redesign: "Sound Redesign"
-};
+const categories = ["released", "wip", "asset", "sound_redesign"];
+const categoryNames = [
+  "Released Sound Design",
+  "Unreleased/WIP Sound Design",
+  "Assets",
+  "Sound Redesign"
+];
+
+const noPopupCategories = ["asset", "sound_redesign"];
 
 const projects = ref([]);
 
 onMounted(() => {
-  projects.value = projectsJson;
+  projects.value = projectsJson.filter(project =>
+    project.categories.some(cat => ["sound_design", "music", "sound_redesign", "asset"].includes(cat))
+  );
 });
 
 const isModalOpen = ref(false);
 const selectedProject = ref(null);
-const noPopupCategories = ["sound_redesign", "asset"];
 
 const openModal = (project) => {
   selectedProject.value = project;
@@ -84,26 +91,35 @@ const closeModal = () => {
 };
 
 const hasProjectsInCategory = (category) => {
-  return projects.value.some((project) => project.categories.includes(category));
+  if (category === "asset" || category === "sound_redesign") {
+    return projects.value.some(project => project.categories.includes(category));
+  }
+  return projects.value.some(project => project.status === category);
 };
 
+watch(isModalOpen, (newValue) => {
+  if (newValue) {
+    document.body.classList.add("modal-open");
+  } else {
+    document.body.classList.remove("modal-open");
+  }
+});
+
 const filteredProjects = (category) => {
-  return projects.value.filter((project) => project.categories.includes(category));
+  if (category === "asset" || category === "sound_redesign") {
+    return projects.value.filter(project => project.categories.includes(category));
+  }
+  return projects.value.filter(project => project.status === category);
 };
 
 const handleTileClick = (project) => {
-  if (noPopupCategories.some((cat) => project.categories.includes(cat))) {
+  if (project.categories.some(cat => noPopupCategories.includes(cat))) {
     window.open(project.link, "_blank");
   } else {
     openModal(project);
   }
 };
-
-watch(isModalOpen, (newValue) => {
-  document.body.classList.toggle("modal-open", newValue);
-});
 </script>
-
 <style>
 .modal-open {
   overflow: hidden;

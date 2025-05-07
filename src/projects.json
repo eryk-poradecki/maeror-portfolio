@@ -2,10 +2,9 @@
   {
     "id": "0",
     "name": "Silence",
+    "status": "wip",
     "categories": [
-      "wip",
       "dev",
-      "game",
       "sound_design",
       "music"
     ],
@@ -19,10 +18,9 @@
   {
     "id": "1",
     "name": "Nycto",
+    "status": "wip",
     "categories": [
-      "wip",
       "dev",
-      "game",
       "sound_design",
       "music"
     ],
@@ -104,10 +102,10 @@
   {
     "id": "11",
     "name": "Rogue Rhythm",
+    "status": "released",
     "categories": [
       "music",
-      "sound_design",
-      "released"
+      "sound_design"
     ],
     "liveDemoLink": "https://store.steampowered.com/app/3091990/Rogue_Rhythm/",
     "shortDescription": "A roguelike with rhythm-game combat and procedural dungeons.",
