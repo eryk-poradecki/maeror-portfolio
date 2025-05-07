@@ -17,21 +17,16 @@
           <h1 class="text-4xl font-bold text-white ml-4">Maeror</h1>
         </div> -->
         <div class="flex flex-col items-center">
-          <img class="w-36 h-36 rounded-full" src="/maeror-avatar.jpg" alt="" width="384" height="512" />
+          <img class="w-36 h-36 rounded-full" src="/myface.jpg" alt="" width="384" height="512" />
           <h1 class="text-4xl font-bold text-center text-white mt-4">
             Hubert Łabuda
           </h1>
         </div>
         <div class="mt-8 text-center">
-          <p class="max-w-[60%] mx-auto text-neutral-200 text-xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor,
-            lacus vitae porttitor venenatis, massa tortor bibendum purus, a
-            tempor ligula risus ut mi. Quisque efficitur eros vel massa
-            bibendum, sit amet pharetra neque feugiat. Integer convallis congue
-            metus, vel commodo velit volutpat eu. Etiam eget ipsum ut eros
-            elementum rhoncus. Phasellus pharetra consectetur felis eget
-            sagittis. Suspendisse a rhoncus tortor. Duis ac lacus ut metus
-            posuere cursus non quis tortor. Sed eget feugiat ipsum.
+          <p class="max-w-[80%] mx-auto text-neutral-200 text-xl">
+            I am a sound designer, music producer and software developer mainly focused on game development. I finished bachelor's degree in Computer Science (game development specialty) at Łódź University of Technology, and I am currently studying for a master's degree on the same faculty. I am also a self-taught music producer and sound designer. I have been releasing music under the name Maeror for 8 years now. I found my passion for creating audio for games during my studies and I have been working on various projects since then.
+            
+            I am actively taking part in various game development events. I have taken part in ZTGK (a competition for game developers hosted by Łódź University of Technology) three times with various projects. I have also participated in multiple game jams hosted in the city of Łódź.
           </p>
         </div>
         <!-- <div>

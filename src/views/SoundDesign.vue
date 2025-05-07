@@ -12,7 +12,7 @@
           <div class="flex-grow border-t border-gray-400"></div>
         </div>
       </h1>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-x-5 gap-y-10 p-8 w-[75%] mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-x-5 gap-y-5 p-8 w-[75%] mx-auto">
         <div v-for="project in filteredProjects(categoryKey)" :key="project.id">
           <div class="aspect-square leading-tight relative overflow-hidden max-w-xs mx-auto rounded-xl hover:scale-110 transition-all"
             style="cursor: pointer;" @click="handleTileClick(project)">
@@ -59,8 +59,7 @@ import PopupModal from "../components/PopupModal.vue";
 
 const categories = {
   released: "Released Games",
-  game: "Unreleased/WIP Games",
-  sound_design: "Sound Designs",
+  game: "Unreleased/Projects/WIP Games",
   asset: "Assets",
   sound_redesign: "Sound Redesign"
 };

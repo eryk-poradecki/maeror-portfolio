@@ -2,7 +2,13 @@
   {
     "id": "0",
     "name": "Silence",
-    "categories": ["game", "sound_design", "music"],
+    "categories": [
+      "wip",
+      "dev",
+      "game",
+      "sound_design",
+      "music"
+    ],
     "shortDescription": "Together with a friend, take on the role of an agent and a hacker who must stop a military company from launching a dangerous combat robot.",
     "longDescription": "projects/Silence/silence.md",
     "image": "projects/Silence/images/silence.png",
@@ -13,16 +19,24 @@
   {
     "id": "1",
     "name": "Nycto",
-    "categories": ["game", "sound_design", "music"],
+    "categories": [
+      "wip",
+      "dev",
+      "game",
+      "sound_design",
+      "music"
+    ],
     "shortDescription": "Explore a mysterious dimmension that you have been trapped in.  Solve puzzles to escape this abstract non-euclidean world. Although your friends died along the way, you are not alone out there...",
     "longDescription": "projects/Nycto/nycto.md",
     "image": "projects/Nycto/images/nycto.jpg",
-    "liveDemoLink": "https://liptonleon.itch.io/nycto"
+    "liveDemoLink": "https://gleaminggeckos.itch.io/nycto"
   },
   {
     "id": "4",
     "name": "Spotify",
-    "categories": ["music"],
+    "categories": [
+      "music"
+    ],
     "link": "https://open.spotify.com/artist/1qBtLLu4Z7x3Dar7iiNR39",
     "shortDescription": "",
     "image": "maeror_spotify.jpg"
@@ -30,7 +44,9 @@
   {
     "id": "5",
     "name": "Soundcloud",
-    "categories": ["music"],
+    "categories": [
+      "music"
+    ],
     "link": "https://soundcloud.com/maerormusic",
     "shortDescription": "",
     "image": "maeror_sc.jpg"
@@ -38,7 +54,9 @@
   {
     "id": "6",
     "name": "Bandcamp",
-    "categories": ["music"],
+    "categories": [
+      "music"
+    ],
     "link": "https://maerormusic.bandcamp.com/music",
     "shortDescription": "",
     "image": "maeror_bc.jpg"
@@ -46,7 +64,9 @@
   {
     "id": "7",
     "name": "Moonlighter Golem Dungeon Redesign",
-    "categories": ["sound_redesign"],
+    "categories": [
+      "sound_redesign"
+    ],
     "link": "https://www.youtube.com/watch?v=cK5HKYTlyFU&ab_channel=MaerorSoundDesign",
     "shortDescription": "",
     "image": "moonlighter_golem.jpg"
@@ -54,7 +74,9 @@
   {
     "id": "8",
     "name": "Cyberpunk 2077 UI Sound Redesign",
-    "categories": ["sound_redesign"],
+    "categories": [
+      "sound_redesign"
+    ],
     "link": "https://www.youtube.com/watch?v=xnCoMu19BFE&ab_channel=MaerorSoundDesign",
     "shortDescription": "",
     "image": "cp2077_portfolio.jpg"
@@ -62,7 +84,9 @@
   {
     "id": "9",
     "name": "Xerath Abilities Sound Redesign",
-    "categories": ["sound_redesign"],
+    "categories": [
+      "sound_redesign"
+    ],
     "link": "https://www.youtube.com/watch?v=0pvG_Ksb_qQ&ab_channel=MaerorSoundDesign",
     "shortDescription": "",
     "image": "xerath_portfolio.jpg"
@@ -70,7 +94,9 @@
   {
     "id": "10",
     "name": "Neeko Abilities Sound Redesign",
-    "categories": ["sound_redesign"],
+    "categories": [
+      "sound_redesign"
+    ],
     "link": "https://www.youtube.com/watch?v=glDQNhxFKrs&ab_channel=MaerorSoundDesign",
     "shortDescription": "",
     "image": "neeko_protfolio.jpg"
@@ -78,17 +104,23 @@
   {
     "id": "11",
     "name": "Rogue Rhythm",
-    "categories": ["released"],
+    "categories": [
+      "music",
+      "sound_design",
+      "released"
+    ],
     "liveDemoLink": "https://store.steampowered.com/app/3091990/Rogue_Rhythm/",
     "shortDescription": "A roguelike with rhythm-game combat and procedural dungeons.",
     "longDescription": "projects/RogueRhythm/rr.md",
-    "image": "projects/RogueRhythm/RR_Game.jpg",
-    "youtubeLink": "https://www.youtube.com/watch?v=XBwdle7DUZQ&ab_channel=AsaX"
+    "image": "projects/RogueRhythm/RogueRhythm.jpg",
+    "youtubeLink": "https://www.youtube.com/watch?v=Fkw_Dsz8aWQ"
   },
   {
     "id": "12",
     "name": "Foley Percussion Sample Pack",
-    "categories": ["asset"],
+    "categories": [
+      "asset"
+    ],
     "shortDescription": "Sample pack that contains 95 samples of gravel, wood, keys and knives. Recorded using Zoom H6 and Rode NTG3",
     "image": "foleysamplepack.png",
     "link": "https://maerormusic.bandcamp.com/album/maeror-foley-percussion-sample-pack"
