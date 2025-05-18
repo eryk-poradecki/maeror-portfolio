@@ -91,6 +91,7 @@ const hasProjectsInCategory = (category) => {
 
 watch(isModalOpen, (newValue) => {
   if (newValue) {
+    console.log(selectedProject)
     document.body.classList.add("modal-open");
   } else {
     document.body.classList.remove("modal-open");
@@ -108,6 +109,15 @@ const handleTileClick = (project) => {
     openModal(project);
   }
 };
+
+watch(isModalOpen, (newValue) => {
+  console.log('Modal state changed:', newValue);
+  if (newValue) {
+    document.body.classList.add("modal-open");
+  } else {
+    document.body.classList.remove("modal-open");
+  }
+});
 </script>
 <style>
 .modal-open {
