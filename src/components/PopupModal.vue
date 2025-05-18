@@ -15,8 +15,6 @@
 <script setup>
 import { markRaw, ref, watch } from "vue";
 import PopupGame from "./PopupGame.vue";
-import PopupMusic from "./PopupMusic.vue";
-import PopupAsset from "./PopupAsset.vue";
 
 const props = defineProps(["closeModal", "selectedProject"]);
 const popoutComponent = ref(null);
@@ -29,15 +27,11 @@ watch(
   () => props.selectedProject,
   (newProject) => {
     if (newProject) {
-      const { categories } = newProject;
+      const { type } = newProject;
       
-      if (categories.includes("game") || categories.includes("released")) {
+      if (type == "game") {
         popoutComponent.value = markRaw(PopupGame);
-      } else if (categories.length === 1 && categories.includes("music")) {
-        popoutComponent.value = markRaw(PopupMusic);
-      } else {
-        popoutComponent.value = markRaw(PopupAsset);
-      }
+      } 
     }
   },
   { immediate: true }

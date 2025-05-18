@@ -169,8 +169,12 @@
     return projects.value.filter(project => project.categories.includes('music') && project.categories.includes('game'));
   });
   
-  const handleTileClick = (project) => {
+ const handleTileClick = (project) => {
+  if (project.categories.length === 1 && project.categories.includes('music') && project.link) {
+    window.open(project.link, '_blank');
+  } else {
     openModal(project);
-  };
+  }
+}; 
   </script>
   

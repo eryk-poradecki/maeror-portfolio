@@ -3,6 +3,7 @@
     "id": "0",
     "name": "Silence",
     "status": "wip",
+    "type": "game",
     "categories": [
       "dev",
       "sound_design",
@@ -19,6 +20,7 @@
     "id": "1",
     "name": "Nycto",
     "status": "wip",
+    "type": "game",
     "categories": [
       "dev",
       "sound_design",
@@ -32,6 +34,7 @@
   {
     "id": "4",
     "name": "Spotify",
+    "type": "other",
     "categories": [
       "music"
     ],
@@ -42,6 +45,7 @@
   {
     "id": "5",
     "name": "Soundcloud",
+    "type": "other",
     "categories": [
       "music"
     ],
@@ -52,6 +56,7 @@
   {
     "id": "6",
     "name": "Bandcamp",
+    "type": "other",
     "categories": [
       "music"
     ],
@@ -62,6 +67,7 @@
   {
     "id": "7",
     "name": "Moonlighter Golem Dungeon Redesign",
+    "type": "other",
     "categories": [
       "sound_redesign"
     ],
@@ -72,6 +78,7 @@
   {
     "id": "8",
     "name": "Cyberpunk 2077 UI Sound Redesign",
+    "type": "other",
     "categories": [
       "sound_redesign"
     ],
@@ -82,6 +89,7 @@
   {
     "id": "9",
     "name": "Xerath Abilities Sound Redesign",
+    "type": "other",
     "categories": [
       "sound_redesign"
     ],
@@ -92,6 +100,7 @@
   {
     "id": "10",
     "name": "Neeko Abilities Sound Redesign",
+    "type": "other",
     "categories": [
       "sound_redesign"
     ],
@@ -103,6 +112,7 @@
     "id": "11",
     "name": "Rogue Rhythm",
     "status": "released",
+    "type": "game",
     "categories": [
       "music",
       "sound_design"
@@ -116,6 +126,7 @@
   {
     "id": "12",
     "name": "Foley Percussion Sample Pack",
+    "type": "other",
     "categories": [
       "asset"
     ],
