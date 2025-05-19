@@ -13,10 +13,10 @@
       </div>
 
       <div>
-        <router-link :to="{ name: 'game_dev' }" class="text-neutral-200 text-xl mr-10">Game Dev</router-link>
-        <router-link :to="{ name: 'sound_design' }" class="text-neutral-200 text-xl mr-10">Sound Design</router-link>
-        <router-link :to="{ name: 'music' }" class="text-neutral-200 text-xl mr-10">Music</router-link>
-        <router-link :to="{ name: 'about' }" class="text-neutral-200 text-xl mr-10">About me</router-link>
+        <router-link :to="{ name: 'game_dev' }" class="text-neutral-200 text-2xl mr-10">Game Dev</router-link>
+        <router-link :to="{ name: 'sound_design' }" class="text-neutral-200 text-2xl mr-10">Sound Design</router-link>
+        <router-link :to="{ name: 'music' }" class="text-neutral-200 text-2xl mr-10">Music</router-link>
+        <router-link :to="{ name: 'about' }" class="text-neutral-200 text-2xl mr-10">About me</router-link>
       </div>
     </div>
   </nav>

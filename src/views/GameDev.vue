@@ -61,7 +61,7 @@ import projectsJson from "/src/projects.json";
 import PopupModal from "../components/PopupModal.vue";
 
 const categories = ["released", "wip"];
-const categoryNames = ["Released Games", "Unreleased/WIP Games"];
+const categoryNames = ["Released Games", "Unreleased/Projects/WIP Games"];
 
 const noPopupCategories = ["music", "sound_redesign", "asset"];
 

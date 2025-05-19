@@ -2,17 +2,17 @@
   <div class="flex flex-col items-center">
     <div class="header my-8 text-6xl font-bold text-neutral-200">Home</div>
     <div class="w-3/5 mx-auto">
-    <div class="relative" style="padding-top: 56.25%;">
+    <!-- <div class="relative" style="padding-top: 56.25%;">
       <iframe
         class="absolute top-0 left-0 w-full h-full"
         src="https://www.youtube.com/embed/mgVNH1xXibE"
         frameborder="0"
         allowfullscreen
       ></iframe>
-    </div>
+    </div> -->
   </div>
     <div class="mt-8 text-center">
-      <p class="max-w-[60%] mx-auto text-neutral-200 text-xl">
+      <p class="max-w-[60%] mx-auto text-neutral-200 text-xl text-justify">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, lacus
         vitae porttitor venenatis, massa tortor bibendum purus, a tempor ligula
         risus ut mi. Quisque efficitur eros vel massa bibendum, sit amet pharetra
