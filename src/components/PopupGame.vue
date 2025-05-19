@@ -1,51 +1,26 @@
 <template>
   <div class="popout-modal" @click="closeAndNotifyParent">
-    <div class="popout-content bg-neutral-800" @click.stop>
-      <iframe
-        class="rounded-md md:w-[40%] md:h-[25vh] md:float-right md:mt-5 md:mx-3 w-full h-full"
-        :src="getYouTubeEmbedLink(selectedProject.youtubeLink)"
-        allowfullscreen
-      ></iframe>
+    <div
+      class="popout-content w-[80%] md:w-[60%] lg:w-[50%] max-h-[90%] overflow-y-auto p-5 rounded-lg text-white bg-neutral-800"
+      style="background-image: url('/bg-brighter.png')" @click.stop>
+      <iframe class="rounded-md md:w-[40%] md:h-[25vh] md:float-right md:mt-5 md:mx-3 w-full h-full"
+        :src="getYouTubeEmbedLink(selectedProject.youtubeLink)" allowfullscreen></iframe>
       <div class="flex items-center">
-        <h1 class="text-5xl font-bold mt-5 mb-10 mr-10 hover:text-gray-700">
+        <h1 class="text-3xl md:text-5xl font-bold mt-5 mb-10 mr-10 hover:text-gray-700">
           {{ selectedProject.name }}
         </h1>
 
         <div class="flex items-center space-x-4">
-          <a
-            v-if="selectedProject.liveDemoLink"
-            :href="selectedProject.liveDemoLink"
-            target="_blank"
-          >
-            <img
-              src="/svg/itchio-badge.svg"
-              alt="Live Demo"
-              class="h-8 w-auto cursor-pointer mb-3"
-            />
+          <a v-if="selectedProject.liveDemoLink" :href="selectedProject.liveDemoLink" target="_blank">
+            <img src="/svg/itchio-badge.svg" alt="Live Demo" class="h-8 w-auto cursor-pointer mb-3" />
           </a>
 
-          <a
-            v-if="selectedProject.steamLink"
-            :href="selectedProject.steamLink"
-            target="_blank"
-          >
-            <img
-              src="/svg/steam-mark.svg"
-              alt="Steam"
-              class="h-8 w-auto cursor-pointer mb-3"
-            />
+          <a v-if="selectedProject.steamLink" :href="selectedProject.steamLink" target="_blank">
+            <img src="/svg/steam-mark.svg" alt="Steam" class="h-8 w-auto cursor-pointer mb-3" />
           </a>
 
-          <a
-            v-if="selectedProject.githubLink"
-            :href="selectedProject.githubLink"
-            target="_blank"
-          >
-            <img
-              src="/svg/github-mark.svg"
-              alt="GitHub"
-              class="h-8 w-auto cursor-pointer bg-white rounded-full mb-3"
-            />
+          <a v-if="selectedProject.githubLink" :href="selectedProject.githubLink" target="_blank">
+            <img src="/svg/github-mark.svg" alt="GitHub" class="h-8 w-auto cursor-pointer bg-white rounded-full mb-3" />
           </a>
         </div>
       </div>
@@ -104,15 +79,5 @@ onMounted(async () => {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-}
-
-.popout-content {
-  width: 50%;
-  max-height: 90%;
-  overflow-y: auto;
-  padding: 20px;
-  border-radius: 10px;
-  color: white;
-  background-image: url("/bg-brighter.png");
 }
 </style>

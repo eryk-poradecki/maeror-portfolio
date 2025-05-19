@@ -3,7 +3,7 @@
     <div class="header my-8 text-6xl font-bold text-neutral-200">About me</div>
   </div>
   <div class="flex flex-col items-center justify-center">
-    <div class="shadow-lg rounded-xl w-[60%] mt-[2%] flex flex-col items-center justify-center">
+    <div class="shadow-lg rounded-xl w-[90%] md:w-[60%] mt-[2%] flex flex-col items-center justify-center">
       <div class="pb-[2%]">
         <!-- TEXT ON THE RIGHT OF THE AVATAR -->
         <!-- <div class="flex items-center">
@@ -23,7 +23,7 @@
           </h1>
         </div>
         <div class="mt-8 text-center">
-          <p class="max-w-[80%] mx-auto text-neutral-200 text-xl">
+          <p class="mx-auto w-[100%] md:w-[70%] lg:w-[60%] text-neutral-200 text-xl">
             I am a sound designer, music producer and software developer mainly focused on game development. I finished bachelor's degree in Computer Science (game development specialty) at Łódź University of Technology, and I am currently studying for a master's degree on the same faculty. I am also a self-taught music producer and sound designer. I have been releasing music under the name Maeror for 8 years now. I found my passion for creating audio for games during my studies and I have been working on various projects since then.
             
             I am actively taking part in various game development events. I have taken part in ZTGK (a competition for game developers hosted by Łódź University of Technology) three times with various projects. I have also participated in multiple game jams hosted in the city of Łódź.

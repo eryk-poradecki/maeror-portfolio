@@ -1,10 +1,10 @@
 <template>
     <div class="flex flex-col items-center">
-      <div class="header my-2 text-7xl font-bold text-neutral-200">Music</div>
+      <div class="header my-2 text-4xl md:text-7xl font-bold text-neutral-200">Music</div>
     </div>
   
     <div v-if="filteredPersonalMusicProjects.length">
-      <h1 class="text-4xl font-normal text-center text-neutral-200">
+      <h1 class="text-2xl md:text-4xl font-normal text-center text-neutral-200">
         <div class="relative flex py-5 items-center">
           <div class="flex-grow border-t border-gray-400"></div>
           <span class="flex-shrink mx-4 text-neutral-200">Personal Music</span>
